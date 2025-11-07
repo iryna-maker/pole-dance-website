@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pole Dance Fitness</title>
+
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- icons -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/logo-1 1.png" alt="Pole Dance Fitness" class="logo" />
+        <button class="burger" id="burgerBtn" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Upisi</a>
+        <a href="#">Aktualno</a>
+        <a href="#">Program</a>
+        <a href="#">Galerija</a>
+        <a href="#">Boudoir</a>
+        <a href="#">O nama</a>
+      </nav>
+
+      <div class="social">
+        <a href="https://www.facebook.com/poledancefitnes"
+          ><img src="images/media-facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://www.instagram.com/explore/locations/621605901/"
+          ><img src="images/media-instagram.png" alt="Instagram"
+        /></a>
+        <a href="https://www.youtube.com/user/PoleDanceFitnessZg"
+          ><img src="images/media-youtube.png" alt="YouTube"
+        /></a>
+        <a href="https://x.com/poledancefitnes"
+          ><img src="images/media-twitter.png" alt="Twitter / X"
+        /></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <!-- background ide iz CSS-a -->
+    </div>
+    <div class="hero-content">
+      <p class="quote">
+        “There are no strangers here;<br />
+        Only friends you haven’t yet met”
+      </p>
+      <p class="quote-author">– William Butler Yeats</p>
+
+      <a href="#" class="cta-btn">UPIŠI SE</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-inner">
+      <h2 class="section-title">Pokreti iz prve ruke</h2>
+
+      <div class="testi-wrapper">
+        
+        <div class="testi-row" id="testiRow">
+          <!-- Kartica 1 -->
+          <article class="testi-card">
+            <div class="testi-avatar">
+              <img src="images/image-avatar1.png" alt="Sandra 33g." />
+            </div>
+            <p class="testi-text">
+              “Kad sam krenula na prvi trening, na kraj pameti mi nije bilo da
+              ću biti…”
+            </p>
+            <p class="testi-meta">
+              <strong>Sandra 33g.</strong>
+            </p>
+          </article>
+
+          <!-- Kartica 2 -->
+          <article class="testi-card">
+            <div class="testi-avatar">
+              <img src="images/image-avatar2.png" alt="Iva 34g." />
+            </div>
+            <p class="testi-text">
+              “Nije Pole Dance Fitness u temelju promijenio moj život, ali ga je
+              svakako…”
+            </p>
+            <p class="testi-meta">
+              <strong>Iva 34g.</strong>
+            </p>
+          </article>
+
+          <!-- Kartica 3 (aktivna / veća / fokusirana) -->
+          <article class="testi-card is-active">
+            <div class="testi-avatar">
+              <img src="images/image-avatar3.png" alt="Martina 31g." />
+            </div>
+            <p class="testi-text">
+              “Zatvorite oči. Izbacite iz glave sve misli i opustite se! Tko
+              govori instrukto…”
+            </p>
+            <p class="testi-meta">
+              <strong>Martina 31g.</strong>
+            </p>
+          </article>
+
+          <!-- Kartica 4 -->
+          <article class="testi-card">
+            <div class="testi-avatar">
+              <img src="images/image-avatar4.png" alt="Melita 38g." />
+            </div>
+            <p class="testi-text">
+              “Pole dance fitness je za mene jedno prekrasno iskustvo. Osim što
+              izgra…”
+            </p>
+            <p class="testi-meta">
+              <strong>Melita 38g.</strong>
+            </p>
+          </article>
+
+          <!-- Kartica 5 -->
+          <article class="testi-card">
+            <div class="testi-avatar">
+              <img src="images/image-avatar5.png" alt="Andrea 23g." />
+            </div>
+            <p class="testi-text">
+              “Pole dance fitness je za mene jedno prekrasno iskustvo. Osim što
+              izgra…”
+            </p>
+            <p class="testi-meta">
+              <strong>Andrea 23g.</strong>
+            </p>
+          </article>
+        </div>
+
+        <div class="testi-pagination">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO CARDS -->
+  <section class="info-cards">
+    <div class="section-inner cards-grid">
+      <article class="info-card">
+        <picture class="info-img-wrap">
+        <!--mobile img--> 
+        <source srcset="images/img-card-mobile1.png" media="(max-width: 768px)">
+        <!-- desktop slika -->
+        <source srcset="images/img-card-desktop1.png" media="(min-width: 769px)">
+        <!-- fallback (obavezno) -->
+        <img src="images/img-card-desktop1.png" alt="" class="info-img" />
+      </picture>
+
+        <div class="info-body">
+          <h3>Zašto Pole Dance Fitness?</h3>
+          <p>
+            Pole Dance Fitness namijenjen je isključivo ženama i posebno
+            prilagođen obliku ženskog tijela. U današnjem svijetu, svijetu koji
+            diktira brzi tempo življenja, žena rastrgana između poslovnih i
+            obiteljskih obveza često…
+          </p>
+          <p class="more-mobile">more…</p>
+        </div>
+      </article>
+
+      <article class="info-card">
+        <picture class="info-img-wrap">
+        <!--mobile img--> 
+        <source srcset="images/img-card-mobile2.png" media="(max-width: 768px)">
+        <!-- desktop slika -->
+        <source srcset="images/img-card-desktop2.png" media="(min-width: 769px)">
+        <!-- fallback (obavezno) -->
+        <img src="images/img-card-desktop2.png" alt="" class="info-img" />
+      </picture>
+        <div class="info-body">
+          <h3>Što je Pole Dance Fitness?</h3>
+          <p>
+            Pole Dance Fitness – Pole Philosophy je plesni studio koji razvija i
+            uči vještinu plesa na šipci. Ono što razlikuje naš studio od ostalih
+            studija je naglasak na ljepoti ženskog tijela i individualni
+            izražaj svake žene. Razvijamo i njegujemo individualni pristup
+            svakoj našoj članici…
+          </p>
+          <p class="more-mobile">more…</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-cols">
+        <!-- 1. LOGO -->
+        <div class="footer-brand">
+          <img
+            src="images/logo-1 1.png"
+            alt="Pole Dance Fitness"
+            class="footer-logo"
+          />
+        </div>
+
+        <!-- 2. ZAGREB -->
+        <div class="footer-col">
+          <h4>Zagreb</h4>
+          <ul class="contact-list">
+            <li><img src="images/telephone.png" alt="">099/ 506 9447</li>
+            <li><img src="images/mail.png" alt="">info@poledancefitness</li>
+            <li><img src="images/location.png" alt="">Zagrebački velesajam, Av.Dubrovnik, 15 paviljon 8b</li>
+            <li><img src="images/mail.png" alt="">oranice@poledancefitness.net</li>
+            <li><img src="images/location.png" alt="">Medarska 69</li>
+          </ul>
+        </div>
+
+        <!-- 3. SPLIT -->
+        <div class="footer-col">
+          <h4>Split</h4>
+          <ul class="contact-list">
+            <li><img src="images/telephone.png" alt="">099/ 506 9447</li>
+            <li><img src="images/mail.png" alt="">split@poledancefitness</li>
+            <li><img src="images/location.png" alt="">Stadion Poljud 8 Mediteranskih igara 2 Ispod istočne tribine (između ulaza S i T)</li>
+          </ul>
+        </div>
+
+        <!-- 4. SOCIAL -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/poledancefitnes"
+            ><img src="images/media-facebook.png" alt="Facebook"
+          /></a>
+          <a href="https://www.instagram.com/explore/locations/621605901/"
+            ><img src="images/media-instagram.png" alt="Instagram"
+          /></a>
+          <a href="https://www.youtube.com/user/PoleDanceFitnessZg"
+            ><img src="images/media-youtube.png" alt="YouTube"
+          /></a>
+          <a href="https://x.com/poledancefitnes"
+            ><img src="images/media-twitter.png" alt="Twitter / X"
+          /></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="legal">© Pole Dance Fitness. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+ <script src="js/script.js"></script>
+</body>
+</html>
