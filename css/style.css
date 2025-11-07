@@ -1,4 +1,5 @@
 /* ========== BASIC RESET ========== */
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -13,8 +14,13 @@ body {
   color: #fff;
   line-height: 1.5;
 }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;  
+}
 
-/* zajednički wrapper za sekcije */
+/* ========== GLOBAL SECTION STYLES ========== */
 .section-inner {
   max-width: 1300px;
   margin: 0 auto;
@@ -152,7 +158,7 @@ body {
     0 100% / 100% 60% no-repeat;
 }
 
-/* slika u pozadini heroa */
+/* hero background image */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -162,7 +168,7 @@ body {
   background-repeat: no-repeat;
 }
 
-/* široki ekrani – cijela cura */
+/* wide screens - the whole girl */
 @media (min-width: 1200px) {
   .hero-bg {
     background-size: contain;
@@ -232,7 +238,7 @@ body {
   color: #fff;
 }
 
-/* wrap spuštamo na prijelaz crno/bijelo */
+/* wrap down to the black/white transition */
 .testi-wrapper {
   position: relative;
   max-width: 1300px;
@@ -240,11 +246,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(60px); /* podešavaš koliko ulaze u bijeli dio */
+  transform: translateY(60px); /* adjust how much goes into the white space */
   z-index: 2;
 }
 
-/* red sa karticama */
+/* row with cards */
 .testi-row {
   display: flex;
   flex-wrap: nowrap;
@@ -252,14 +258,14 @@ body {
   padding: 40px 0 40px;
   width: 100%;
   justify-content: center;
-  scroll-snap-type: x mandatory; /* za mobitel swipe */
+  scroll-snap-type: x mandatory; /* mobitel swipe */
 }
 
 .testi-row::-webkit-scrollbar {
   display: none;
 }
 
-/* jedna kartica */
+/* one card */
 .testi-card {
   position: relative;
   background: #fff;
@@ -268,7 +274,7 @@ body {
   min-width: 240px;
   max-width: 260px;
   flex: 0 0 auto;
-  padding: 48px 16px 16px; /* prostor gore za avatar */
+  padding: 48px 16px 16px; /* space above for avatar */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
@@ -279,14 +285,14 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* aktivna kartica */
+/* active card */
 .testi-card.is-active {
   transform: scale(1.05);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   z-index: 3;
 }
 
-/* avatar koji “visi” iz kartice */
+/* avatar "hanging" from the card */
 .testi-avatar {
   position: absolute;
   left: 50%;
@@ -310,7 +316,7 @@ body {
   object-fit: cover;
 }
 
-/* tekst izjave */
+/* statement text */
 .testi-text {
   font-size: 0.9rem;
   color: #1e1e1e;
@@ -319,7 +325,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* ime i godine ispod */
+/* name and age below */
 .testi-meta {
   font-size: 0.9rem;
   color: #2d2b2e;
@@ -331,7 +337,7 @@ body {
   color: #000;
 }
 
-/* pagination ispod slidera */
+/* pagination below the slider */
 .testi-pagination {
   display: flex;
   justify-content: center;
@@ -352,7 +358,7 @@ body {
   transition: width 0.2s ease;
 }
 
-/* sigurnosna mreža: ništa se ne reže */
+/* safety net */
 .testimonials,
 .testimonials .section-inner,
 .testi-wrapper,
@@ -414,7 +420,7 @@ body {
   font-weight: 500;
 }
 
-/* desktop layout za info kartice */
+/* desktop layout for info cards */
 @media (min-width: 900px) {
   .cards-grid {
     grid-template-columns: 1fr 1fr;
@@ -448,7 +454,7 @@ body {
   margin: 0 auto;
 }
 
-/* mobile default: sve ide jedan ispod drugog */
+/* mobile default: everything goes one below the other */
 .footer-cols {
   display: grid;
   grid-template-columns: 1fr;
@@ -490,7 +496,7 @@ body {
   vertical-align: middle;
 }
 
-/* social ikone u footeru */
+/* social icons footer */
 .footer-social {
   display: flex;
   gap: 16px;
@@ -556,7 +562,7 @@ body {
   .main-nav {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: 0px;
     height: 100vh;
     width: 80%;
     max-width: 320px;
@@ -566,20 +572,20 @@ body {
     flex-direction: column;
     gap: 24px;
     border-left: 1px solid rgba(255, 255, 255, 0.15);
-    
+    transform: translateX(100%);
     transition: right 0.3s ease;
     z-index: 1000;
   }
 
   .main-nav.show {
-    right: 0;
+    transform: translateX(0);
   }
 
   .main-nav a.active::after {
     bottom: -4px;
   }
 
-  /* ✅ ISPRAVLJEN BURGER BLOK */
+  /* BURGER BLOK */
   .burger {
     display: flex;
     margin-left: auto;
@@ -599,7 +605,7 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  /* stanje kada je otvoren meni */
+  /* state when menu is open */
 .burger.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -612,7 +618,7 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* animacija svih linija */
+/* animation of all lines */
 .burger span {
   display: block;
   width: 28px;
@@ -622,7 +628,7 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-  /* ✅ SAKRIJ SOCIAL */
+  /* SOCIAL */
   .social {
     display: none;
   }
@@ -643,10 +649,9 @@ body {
 }
 /* ---------------- TESTIMONIALS – MOBITEL ---------------- */
 @media (max-width: 768px) {
-  /* sekcija više ne prelazi u bijeli dio – sve je na crnoj pozadini */
   .testimonials {
     background: linear-gradient(#000 0%, #000 55%, #f5f5f5 55%, #f5f5f5 100%);              /* jednostavna crna pozadina */
-    padding: 2px 0px 8px;       /* normalan padding, bez ogromnog dna */
+    padding: 2px 0px 8px;       
   }
   @media (max-width: 768px) {
   .testi-card.is-active {
@@ -655,23 +660,21 @@ body {
   }
 }
 
-  /* makni spuštanje kartica jer nam overlap na mobu ne treba */
   .testi-wrapper {
     transform: translateY(4px);
     align-items: stretch;
   }
 
-  /* red kartica: horizontalni scroll, ali bez clippinga */
   .testi-row {
     display: flex;
     flex-wrap: nowrap;
     gap: 16px;
     overflow-x: auto;
-    overflow-y: visible;           /* bitno da sjene/avatare ne reže */
+    overflow-y: visible;           
     padding: 32px 0 16px;
     width: 100%;
     justify-content: flex-start;
-    scroll-snap-type: x mandatory; /* swipe po jednoj kartici */
+    scroll-snap-type: x mandatory; /* mobitel swipe */
   }
   .testi-card:last-child {
   margin-right: 16px;
@@ -684,21 +687,18 @@ body {
     display: none;
   }
 
-  /* kartica zauzme većinu širine ekrana, jedna po jedna */
   .testi-card {
-    min-width: 90%;                /* ~80% širine ekrana */
+    min-width: 90%;                
     max-width: 320px;
-    margin: 0 0 0 8px;             /* mali razmak s lijeve strane */
+    margin: 0 0 0 8px;             
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
   }
 
-  /* avatar ostaje isti – lijepo visi iz kartice */
   .testi-avatar {
     width: 56px;
     height: 56px;
   }
 
-  /* pagination po sredini ispod */
   .testi-pagination {
     margin-top: 4px;
     justify-content: center;
@@ -707,23 +707,23 @@ body {
 /* ========== NASLOV SEKCIJE – MOBILE SIZE FIX ========== */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 1.5rem;   /* oko 24px, čitko ali ne preveliko */
-    margin-bottom: 16px; /* malo manji razmak ispod */
+    font-size: 1.5rem;   
+    margin-bottom: 16px; 
   }
 }
 /* ========== CTA BUTTON – MOBILE SIZE FIX ========== */
 @media (max-width: 768px) {
   .cta-btn {
-    font-size: 1rem;       /* oko 16px */
-    padding: 8px 20px;     /* manji padding da izgleda skladno */
-    border-width: 2px;     /* tanji zlatni rub */
-    margin-top: 16px;      /* smanjen razmak od teksta iznad */
+    font-size: 1rem;       
+    padding: 8px 20px;     
+    border-width: 2px;     
+    margin-top: 16px;      
   }
 }
 /* ========== INFO CARDS – MOBILE SPACING FIX ========== */
 @media (max-width: 768px) {
   .info-cards {
-    padding: 16px 16px 32px; /* smanjen gornji i bočni razmak */
+    padding: 16px 16px 32px; 
   }
 
   .info-card {
@@ -735,28 +735,27 @@ body {
 /* ========== INFO CARDS – MOBITEL ========== */
 @media (max-width: 768px) {
   .info-cards {
-    padding: 24px 16px 32px;     /* malo manje paddinga gore/dolje */
+    padding: 24px 16px 32px;     
   }
 
   .cards-grid {
-    gap: 16px;                   /* manji razmak između kartica */
+    gap: 16px;                   
   }
 
   .info-card {
-    padding: 14px;               /* kompaktan padding */
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10); /* malo mekša sjena */
+    padding: 14px;               
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10); 
   }
 
   .info-img-wrap {
-    /* čisto osiguranje da se slika ponaša kao dosad */
     display: block;
   }
 
   .info-img {
     width: 100%;
-    height: auto;        /* više nema fiksne visine */
+    height: auto;        
     max-height: none;
-    object-fit: contain; /* ili probaj cover vs contain, vidi što ti više paše */
+    object-fit: contain; 
     display: block;
     border-radius: 6px;
   }
@@ -777,13 +776,12 @@ body {
     display: inline-block;
     margin-top: 4px;
     font-weight: 600;
-    color: #b36b00;              /* malo naglašeniji 'more...' */
+    color: #b36b00;              
   }
 }
 
 /* ========== TESTIMONIALS – MOBITEL DORADA ========== */
 @media (max-width: 768px) {
-  /* na mobu sve kartice iste - nema jače aktivne */
   .testi-card {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
     transform: none;
@@ -805,7 +803,7 @@ body {
     row-gap: 24px;
   }
 
-  /* 2. i 3. dijete u .footer-cols su Zagreb i Split kolone */
+  /* 2nd and 3rd children in .footer-cols are the Zagreb and Split columns */
   .footer-cols > .footer-col:nth-child(2) {
     grid-area: zagreb;
   }
